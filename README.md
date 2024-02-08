@@ -2,6 +2,10 @@
 
 a toy encryption lib
 
+## demo
+
+- https://code4fukui.github.io/Ango/
+
 ## usage
 
 ```js

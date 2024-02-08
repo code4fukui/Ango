@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+<title>暗号はじめのいっぽ - Ango.js</title>
+</head><body>
+<h1>暗号はじめのいっぽ - Ango.js</h1>
+<main>
+<span>平文</span><input id="insrc" value="ひらぶん"><br>
+<span>共通鍵</span><input id="inkey" value="1"><br>
+<button id="btnenc">↓ 暗号</button><br>
+<span>暗号文</span><input id="indst"><br>
+<span>共通鍵</span><input id="inkey2" placeholder="秘密の鍵を入力！"><br>
+<button id="btndec">↓ 複合</button><br>
+<span>複合文</span><input id="indst2"><br>
+
+<hr>
+<a href="https://github.com/code4fukui/Ango/">src on GitHub</a><br>
+</main>
+
+<script type="module">
+import { Ango } from "./Ango.js";
+
+btnenc.onclick = () => {
+  const n = parseInt(inkey.value);
+  const key = isNaN(n) ? 0 : n;
+  indst.value = Ango.encode(insrc.value, key);
+};
+btndec.onclick = () => {
+  const n = parseInt(inkey2.value);
+  const key = isNaN(n) ? 0 : n;
+  indst2.value = Ango.decode(indst.value, key);
+};
+</script>
+
+<style>
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+input, span {
+  margin: .5em;
+  padding: .5em;
+}
+input {
+  display: inline-block;
+  width: 60vw;
+  font-size: 110%;
+}
+main span {
+  display: inline-block;
+  width: 4em;
+}
+</style>
+
+</body></html>
