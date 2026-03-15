@@ -1,18 +1,17 @@
 # Ango
 
-a toy encryption lib
+簡単な暗号化ライブラリです。
 
-## Demo
+## デモ
 
 - https://code4fukui.github.io/Ango/
 
-## Features
+## 機能
 
-- Provides simple encryption and decryption functions
-- Supports encoding and decoding of Japanese text
-- Allows for a custom encryption key
+- 文字列の暗号化・復号化
+- 共通鍵を使った暗号化
 
-## Usage
+## 使い方
 
 ```js
 import { Ango } from "https://code4fukui.github.io/Ango/Ango.js";
@@ -20,7 +19,7 @@ import { Ango } from "https://code4fukui.github.io/Ango/Ango.js";
 console.log(Ango.encode("あいう", 1)); // ぃぅぇ
 ```
 
-## License
+## ライセンス
 
 MIT License
 
