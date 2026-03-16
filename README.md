@@ -20,7 +20,4 @@ console.log(Ango.encode("あいう", 1)); // ぃぅぇ
 ```
 
 ## License
-
-MIT License
-
-Copyright (c) 2024 Taisuke Fukuno
+MIT License — see [LICENSE](LICENSE).
